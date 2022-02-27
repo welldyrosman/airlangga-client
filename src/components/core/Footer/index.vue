@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .foot-con{
-    background: #004ca3f6;
+    background: rgba(0, 0, 0, 0.699);
     color: white;
     padding: 1rem;
 }

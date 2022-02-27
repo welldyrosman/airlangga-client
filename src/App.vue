@@ -1,25 +1,25 @@
 <template>
-  <div class=" d-flex flex-column justify-content-center">
-    <Header/>
-    <Heroes/>
-    <Catalog/>
-    <ButtonTop/>
+  <div class=""  :style="{backgroundImage:`url(${require('@/assets/images/banner-05.jpg')})`}">
+     <Header/>
+      <router-view />
+      <Footer/>
   </div>
 </template>
 
 <script>
 import Header from './components/core/Header'
-import ButtonTop from './components/core/ButtonTop'
-import Heroes from './components/pages/Heroes'
-import Catalog from './components/pages/Katalog'
+import Footer from './components/core/Footer'
 export default {
   name: 'App',
   components: {
-    Header,
-    Heroes,
-    Catalog,
-    ButtonTop
-  }
+    Header,Footer
+  },
+  mounted() {
+    let themejs = document.createElement('script')
+    themejs.setAttribute('src', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    document.head.appendChild(themejs)
+  },
+  
 }
 </script>
 

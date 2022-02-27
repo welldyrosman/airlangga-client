@@ -1,18 +1,53 @@
 <template>
-    <div class="hero-image" :style="{backgroundImage:`url(${require('@/assets/images/bg_banner.jpg')})`}">
+    <div class="hero-image" :style="{backgroundImage:`url(${require('@/assets/images/banner-04.jpg')})`}">
         <div class="hero-text">
+            <img style="height:150px" src="../../../assets/images/travel.png" />
             <h1 style="font-size:50px">AIRLANGGA SEJAHTERA</h1>
-            <p>TRAVEL AGENCY</p>
-            <button>Start Your Trip</button>
+            <p style="font-size:30px">TRAVEL AGENCY</p>
+            <button @click="toTrip" class="btn-grad">Start Your Trip</button>
         </div>
     </div>
 </template>
 
 <script>
+import $ from "jquery";
 export default {
+    data() {
+        return {
+             tolerance:10
+        }
+    },
+    methods:{
+        toTrip(){
+            window.scrollTo(0, $('.our-trip').offset().top-this.tolerance);
+        },
+    }
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+         .btn-grad {background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px !important;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white !important;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 30px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+         
+         
 </style>

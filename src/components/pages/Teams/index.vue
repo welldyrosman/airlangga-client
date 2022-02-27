@@ -80,4 +80,5 @@ export default {
 .teams{
     margin-top: 3rem;
 }
+
 </style>
