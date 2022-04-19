@@ -1,7 +1,7 @@
 <template>
    <div class="">
     <Heroes/>
-    <Catalog/>
+    <Catalog :loading='loading' :datas="alldata" />
     <ButtonTop/>
   </div>
 </template>
@@ -16,6 +16,19 @@ export default {
     Heroes,
     Catalog,
     ButtonTop
+  },
+  data() {
+    return {
+      loading:true,
+      alldata:{}
+    }
+  },
+  mounted(){
+      this.$http.get('/airlanggadata').then((ret)=>{
+        this.alldata=ret.data.data;
+        this.loading=false;
+           console.log(this.alldata)
+      })
   }
 }
 </script>

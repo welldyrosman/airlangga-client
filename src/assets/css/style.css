@@ -6,7 +6,38 @@ body, html {
     font-family: 'Nunito', sans-serif;
     background-color: #fff;
   }
-  
+  .chatwa{
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.chatwa:hover{
+     background: rgb(1, 97, 1);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border: 1px solid rgba(136, 136, 136, 0.358);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
   .hero-image {
     /* background-image: url('../images/bg_banner.jpg'); */
     height: 100%;
