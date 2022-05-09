@@ -23,6 +23,12 @@ import loader from "vue-ui-preloader";
 import {func} from "./assets/js/myfunction"
 import store from './store';
 import VueAnimateOnScroll from 'vue-animate-onscroll'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  duration: 1500,
+  easing: 'ease-in-out',
+});
 
 Vue.use(VueAnimateOnScroll)
 Vue.prototype.$func = func;

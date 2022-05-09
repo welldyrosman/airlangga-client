@@ -1,17 +1,15 @@
 <template>
   <div class="congallery">
     <div class="container-fluid text-center">
-      <h1 class="head">GALLERY</h1>
+      <h1 class="head" data-aos="fade-down">GALLERY</h1>
       <div id="shape-container">
         <div class="grid">
           <ul id="hexGrid">
             <li
               v-for="i in 14"
               :key="i"
-              v-animate-onscroll="{
-                down: 'animate__animated animate__fadeInDown',
-                up: 'animate__animated animate__fadeInUp',
-              }"
+              :data-aos="getanimation(i)"
+              data-aos-duration="1200"
               class="hex"
             >
               <div class="hexIn">
@@ -40,6 +38,12 @@
 export default {
   data() {
     return {
+      aos: {
+        "fade-left": [1, 9, 10],
+        "fade-up": [2, 4, 8, 11, 13],
+        "fade-down": [3, 7, 12],
+        "fade-right": [5, 6, 14],
+      },
       services: [
         {
           id: 1,
@@ -79,6 +83,15 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    getanimation(i) {
+      for (var p in this.aos) {
+        if (this.aos[p].includes(i)) {
+          return p;
+        }
+      }
+    },
   },
 };
 </script>

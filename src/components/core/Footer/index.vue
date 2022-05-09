@@ -7,7 +7,7 @@
       <div class="col-md-4 text-center"></div>
       <div class="col-md-4">
         <div>
-          <h3>CONTACT US</h3>
+          <h3 data-aos="flip-down">CONTACT US</h3>
           <hr />
           <p>
             <a
@@ -19,14 +19,16 @@
             >
           </p>
 
-          <p class="addr">Perumahan Puri Anggrek Blok F5 No 4 - Serang - Banten</p>
-          <div class="btn-sos">
+          <p class="addr" data-aos="zoom-in">
+            Perumahan Puri Anggrek Blok F5 No 4 - Serang - Banten
+          </p>
+          <div class="btn-sos" data-aos="zoom-in">
             <font-awesome-icon icon="fa-brands fa-instagram" />Airlangga_travel
           </div>
-          <div class="btn-sos">
+          <div class="btn-sos" data-aos="zoom-in">
             <font-awesome-icon icon="fa-brands fa-facebook" />Airlangga_travel
           </div>
-          <div class="btn-sos">
+          <div class="btn-sos" data-aos="zoom-in">
             <font-awesome-icon icon="fa-solid fa-envelope" />info@airlanggasejahtera.com
           </div>
         </div>

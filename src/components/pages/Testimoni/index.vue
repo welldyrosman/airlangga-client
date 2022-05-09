@@ -1,25 +1,10 @@
 <template>
   <div class="bg-team">
     <div class="container-fluid text-center text-white">
-      <h1
-        v-animate-onscroll="{
-          down: 'animate__animated animate__bounceInRight',
-          up: 'animate__animated animate__bounceInLeft',
-        }"
-      >
-        TESTIMONI
-      </h1>
+      <h1 data-aos="fade-down">TESTIMONI</h1>
       <hr />
       <div class="d-flex slider">
-        <figure
-          v-for="i in 5"
-          v-animate-onscroll="{
-            down: 'animate__animated animate__fadeInRight',
-            up: 'animate__animated animate__fadeInLeft',
-          }"
-          :key="i"
-          class="snip1197"
-        >
+        <figure v-for="i in 5" data-aos="fade-right" :key="i" class="snip1197">
           <figcaption>
             <blockquote>
               Sometimes I think the surest sign that intelligent life exists elsewhere in

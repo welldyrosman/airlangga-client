@@ -1,10 +1,16 @@
 <template>
   <div class="bg-team">
     <div class="container-fluid">
-      <h1>OUR PROFESSIONAL TEAM</h1>
+      <h1 data-aos="fade-down">OUR PROFESSIONAL TEAM</h1>
       <hr />
       <div class="rowteam">
-        <div v-for="i in 10" :key="i" class="card-team" :class="{ active: i == 5 }">
+        <div
+          v-for="(i, index) in 10"
+          :key="i"
+          class="card-team"
+          :data-aos="index % 2 == 0 ? 'fade-down' : 'fade-up'"
+          :class="{ active: i == 5 }"
+        >
           <img :src="require('@/assets/images/Teams/akbar.jpeg')" />
           <p class="name">ABDUL GHANI</p>
           <p>OWNER</p>
@@ -32,10 +38,6 @@ p.name {
 }
 .card-team p {
   color: #000;
-}
-.card-team:hover {
-  transform: scale(1.3);
-  margin: 30px;
 }
 .card-team {
   flex-basis: 200px;

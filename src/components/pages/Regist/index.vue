@@ -13,14 +13,7 @@
       disableScrolling="false"
       name="dots"
     ></loader>
-    <form
-      id="regForm"
-      v-animate-onscroll="{
-        down: 'animate__animated animate__fadeInDown',
-        up: 'animate__animated animate__fadeInUp',
-      }"
-      action=""
-    >
+    <form data-aos="fade-left" id="regForm" action="">
       <h1>Register:</h1>
 
       <!-- One "tab" for each step in the form: -->

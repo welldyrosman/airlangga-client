@@ -6,20 +6,14 @@
     <div class="hero-text">
       <img
         style="height: 150px"
-        class="animate__animated animate__flip"
+        data-aos="flip-left"
         src="../../../assets/images/travel.png"
-        v-animate-onscroll="{
-          down: 'animate__animated animate__fadeInUp',
-        }"
       />
-      <h1 style="font-size: 50px" class="animate__animated animate__backInUp">
-        AIRLANGGA SEJAHTERA
-      </h1>
-      <p style="font-size: 30px" class="animate__animated animate__backInUp">
-        TRAVEL AGENCY
-      </p>
+      <h1 style="font-size: 50px" data-aos="fade-right">AIRLANGGA SEJAHTERA</h1>
+      <p style="font-size: 30px" data-aos="fade-left">TRAVEL AGENCY</p>
       <button
         @click="toTrip"
+        data-aos="zoom-in"
         class="btn-grad animate__animated animate__headShake animate__infinite"
       >
         Start Your Trip

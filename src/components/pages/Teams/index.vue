@@ -6,7 +6,7 @@
 
         <div class="row">
           <div v-for="i in 12" :key="i" class="col-xl-2">
-            <div class="team-card">
+            <div data-aos="fade-down" data-aos-duration="2200" class="team-card">
               <img class="team-ava" :src="require('@/assets/images/Teams/akbar.jpeg')" />
               <div class="caption-tag position-relative text-center">
                 <h3 class="team-name">AKBAR MAULANA</h3>

@@ -1,14 +1,19 @@
 <template>
   <div class="container servicecon">
-    <h1 class="head" style="border-bottom: solid 1px">WHY US</h1>
+    <h1
+      class="head"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      style="border-bottom: solid 1px"
+    >
+      WHY US
+    </h1>
     <div class="row">
       <div v-for="(i, index) in services" :key="i.id" class="col-md-3">
         <div
           class="servcon text-center"
-          v-animate-onscroll="{
-            down: 'animate__animated animate__fadeInRight',
-            up: 'animate__animated animate__fadeInLeft',
-          }"
+          :data-aos="index % 2 == 0 ? 'fade-down' : 'fade-up'"
+          data-aos-duration="1500"
         >
           <div
             class="services"

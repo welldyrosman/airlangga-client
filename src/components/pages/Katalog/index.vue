@@ -5,18 +5,18 @@
   >
     <div class="container">
       <div class="container">
-        <h1 class="our-trip" style="border-bottom: solid 1px">OUR FUN TRIP</h1>
+        <h1 class="our-trip" data-aos="fade-left" style="border-bottom: solid 1px">
+          OUR FUN TRIP
+        </h1>
         <div class="row">
           <div v-if="loading" class="col-12 d-flex justify-content-center">
             <orbit-spinner :animation-duration="1200" :size="155" color="#ff1d5e" />
           </div>
-          <div v-else v-for="i in datas.trips" :key="i.id" class="col-md-3">
+          <div v-else v-for="(i, index) in datas.trips" :key="i.id" class="col-md-3">
             <div
               class="cardcatalog"
-              v-animate-onscroll="{
-                down: 'animate__animated animate__fadeInLeft',
-                up: 'animate__animated animate__fadeOutLeft',
-              }"
+              :data-aos="index % 2 == 0 ? 'fade-down' : 'fade-up'"
+              data-aos-duration="1500"
             >
               <img class="imgcatalog" :src="servername + getimage(i)" />
               <h3 class="destination">{{ i.trip_nm }}</h3>
@@ -30,10 +30,7 @@
             </div>
           </div>
         </div>
-        <div
-          @click="showalltrips"
-          class="enddiv animate__animated animate__headShake animate__infinite"
-        >
+        <div @click="showalltrips" class="enddiv" data-aos="fade-up">
           SHOW MORE <font-awesome-icon icon="fa-solid fa-angle-right" />
         </div>
       </div>

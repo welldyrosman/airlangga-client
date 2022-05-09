@@ -113,7 +113,7 @@
                 </tr>
                 <tr>
                   <td align="center">
-                    <div class="chatwa">Confirm Order</div>
+                    <div @click="confirmorder" class="chatwa">Confirm Order</div>
                   </td>
                 </tr>
               </tbody>
@@ -168,6 +168,7 @@ export default {
       });
   },
   methods: {
+    confirmorder() {},
     getdatetrip(d) {
       var dt = new Date(d);
       const date = ("0" + dt.getDate()).slice(-2);

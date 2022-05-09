@@ -1,16 +1,10 @@
 <template>
   <div ref="about" class="about">
     <div class="row">
-      <div
-        class="col-md-12"
-        v-animate-onscroll="{
-          down: 'animate__animated animate__fadeInDown',
-          up: 'animate__animated animate__fadeInUp',
-        }"
-      >
-        <h1>ABOUT US</h1>
+      <div class="col-md-12">
+        <h1 data-aos="fade-down" data-aos-duration="1000">ABOUT US</h1>
         <hr />
-        <p>
+        <p data-aos="fade-up" data-aos-duration="1000">
           Simpan segala kesedihanmu bila belum sempat lihat balon udara langsung di
           Cappadocia. Di Jawa Barat, tepatnya di Subang, ada wisata balon udara tak kalah
           menarik lho. Balon udara menarik itu berada di kawasan Sari Ater, Kecamatan
